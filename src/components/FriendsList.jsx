@@ -5,16 +5,16 @@ const FriendsList = () => {
   const users = useSelector((state) => state.friend.value);
 
   return (
-    <div>
+    <div className="list">
       {users.length > 0 ? (
         <>
-          <h1>Friends' List</h1>
+          <h1 style={{ textAlign: "center" }}> Friends' List</h1>
           <table>
             <thead>
               <tr>
-                <th>Name</th>
-                <th>Age</th>
-                <th>Sex</th>
+                <th className="tablehead">Name</th>
+                <th className="tablehead">Age</th>
+                <th className="tablehead">Sex</th>
               </tr>
             </thead>
             <tbody>
@@ -22,8 +22,8 @@ const FriendsList = () => {
                 return (
                   <tr key={id}>
                     <td>{person.username}</td>
-                    <td>{person.age}</td>
-                    <td>{person.sex}</td>
+                    <td style={{ textAlign: "center" }}>{person.age}</td>
+                    <td style={{ textAlign: "center" }}>{person.sex}</td>
                   </tr>
                 );
               })}
@@ -31,7 +31,9 @@ const FriendsList = () => {
           </table>
         </>
       ) : (
-        <h4>You are about to be my first friend! Yipee!</h4>
+        <h4 style={{ textAlign: "center" }}>
+          You are about to be my Friend! Yipee!
+        </h4>
       )}
     </div>
   );

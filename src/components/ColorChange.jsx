@@ -14,13 +14,13 @@ const ColorChange = () => {
     dispatch(changeBackground(bgColor));
   };
   return (
-    <div>
+    <div className="color-wrapper">
       <label htmlFor="bgcolor">Background Colour</label>
       <input type="text" name="bgcolor" id="" onChange={handleChange} />
+      <button onClick={handleSubmit}>Change Background</button>
       <label htmlFor="textcolor">Text Colour</label>
       <input type="text" name="textcolor" id="" onChange={handleChange} />
-      <button onClick={handleSubmit}>change Background</button>
-      <button onClick={handleSubmit}>change Text Color</button>
+      <button onClick={handleSubmit}>Change Text Color</button>
     </div>
   );
 };
